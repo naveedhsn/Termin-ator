@@ -31,7 +31,7 @@ describe('Add Customer Company', () => {
       cy.get(':nth-child(21) > .options > :nth-child(2) > .icon').click() //No selected from "Organizational elements required?"
 
       cy.wait(2000)
-      //cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[20]/button[1]').click() //pressing on SAVE button
+      cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[20]/button[1]').click() //pressing on SAVE button
     }
 
   }) 
