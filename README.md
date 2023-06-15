@@ -1,1 +1,1 @@
-# Termin-ator
+# Termin-ator Automation Script
