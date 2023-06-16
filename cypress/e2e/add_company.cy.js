@@ -2,24 +2,41 @@
 
 describe('Add Customer Company', () => {
   it('Login_SystemAdmin', function() {
-    cy.visit('https://app.termin-ator.ch/')
+    cy.viewport(1050,700) //Change viewport
+    //cy.visit('https://app.termin-ator.ch/') //Production server
+    cy.visit('https://trqa.dinnova.ch/') //QA server
     cy.get('#email').type('systemadmin@mail.com')
     cy.get('#password').type('password')
     cy.xpath('/html/body/div/div/div[2]/div/div/form/div[3]/button').click()
     cy.wait(5000)
     cy.get('.gap-5 > .cursor-pointer').click()
 
+    //Required Name List...........
+    const company_name = ["Apple", "Google", "Microsoft", "Tesla", "SpaceX", "Samsung",
+     "Redmi", "Vivo", "RealMe", "Oneplus"]
+
+    const company_alias = ["Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John"]
+
+    const street = ["201 Main St.", "15 Maple St.", "104 Elm St.", "C20 Main St.", "Y15 Maple St.", "111 Elm St.", 
+     "XQ Main St.", "45 Maple St.", "PO Elm St.", "Link Road"]
+
+    const house = ["11", "22", "33", "44", "55", "66", "77", "88", "99", "100"]
+
+    const post_code = ["1000", "1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010"]
+
+    const ort = ["Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "Fribourg", "Thun", "Sankt Gallen"]
+
     //Open Add form................
-    for (var i = 1; i < 11; i++) {
+    for (var i = 0; i < 10; i++) {
       cy.wait(6000)
       cy.xpath('/html/body/div/div/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/button').click()
 
-      cy.get('.form > :nth-child(2) > .w-full').type('Company '+i) //company name
-      cy.get('.form > :nth-child(3) > .w-full').type('Company Alias') //company alias name
-      cy.get('.form > :nth-child(5) > .w-full').type('Badda Link Road') //street name
-      cy.get('.form > :nth-child(6) > .w-full').type('12'+i) //house number
-      cy.get('.form > :nth-child(7) > .w-full').type('100'+1) //postal code
-      cy.get('.form > :nth-child(9) > .w-full').type('Dhaka') //ort
+      cy.get('.form > :nth-child(2) > .w-full').type(company_name[i]) //company name
+      cy.get('.form > :nth-child(3) > .w-full').type(company_alias[i]) //company alias name
+      cy.get('.form > :nth-child(5) > .w-full').type(street[i]) //street name
+      cy.get('.form > :nth-child(6) > .w-full').type(house[i]) //house number
+      cy.get('.form > :nth-child(7) > .w-full').type(post_code[i]) //postal code
+      cy.get('.form > :nth-child(9) > .w-full').type(ort[i]) //ort
       cy.get('.toggler').click() //open dropdown of country
       cy.wait(2000)
       cy.get(':nth-child(3) > .wrapper > .default-flat').click() //country selection
