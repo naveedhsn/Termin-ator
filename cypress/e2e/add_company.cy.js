@@ -13,21 +13,28 @@ describe('Add Customer Company', () => {
 
     //Required Name List...........
     const company_name = ["Apple", "Google", "Microsoft", "Tesla", "SpaceX", "Samsung",
+     "Redmi", "Vivo", "RealMe", "Oneplus", "Apple", "Google", "Microsoft", "Tesla", "SpaceX", "Samsung",
      "Redmi", "Vivo", "RealMe", "Oneplus"]
 
-    const company_alias = ["Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John"]
+    const company_alias = ["Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John",
+     "Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John"]
 
     const street = ["201 Main St.", "15 Maple St.", "104 Elm St.", "C20 Main St.", "Y15 Maple St.", "111 Elm St.", 
+     "XQ Main St.", "45 Maple St.", "PO Elm St.", "Link Road", "201 Main St.", "15 Maple St.", "104 Elm St.", "C20 Main St.", "Y15 Maple St.", "111 Elm St.", 
      "XQ Main St.", "45 Maple St.", "PO Elm St.", "Link Road"]
 
-    const house = ["11", "22", "33", "44", "55", "66", "77", "88", "99", "100"]
+    const house = ["11", "22", "33", "44", "55", "66", "77", "88", "99", "100", "11", "22", "33", "44", 
+     "55", "66", "77", "88", "99", "100"]
 
-    const post_code = ["1000", "1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010"]
+    const post_code = ["1000", "1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010",
+     "1000", "1001", "1002", "1003", "1004", "1005", "1006", "1007", "1008", "1009", "1010"]
 
-    const ort = ["Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "Fribourg", "Thun", "Sankt Gallen"]
+    const ort = ["Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "Fribourg", "Thun", 
+     "Sankt Gallen", "Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "Fribourg", "Thun", 
+     "Sankt Gallen"]
 
     //Open Add form................
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
       cy.wait(6000)
       cy.xpath('/html/body/div/div/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/button').click()
 

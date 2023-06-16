@@ -14,28 +14,108 @@ describe('Add Customer Company Admin', () => {
   
       //Required Name List...........
       const first_name = ["John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
+       "Juyena", "Merlin", "Lucia", "Hanni", "John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
+       "Juyena", "Merlin", "Lucia", "Hanni", "John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
        "Juyena", "Merlin", "Lucia", "Hanni"]
 
-       const last_name = ["Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
+      const last_name = ["Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
+       "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
+       "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
        "Beris", "Desouza", "Born", "Dus"]
 
-      //Open Add form................
-      for (var i = 0; i < 10; i++) {
+      //Function with all information of add form.............
+      function myFunction1(i) {
         cy.wait(6000)
         cy.xpath('/html/body/div[1]/div/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/button').click() //Open add form
 
         cy.get(':nth-child(2) > .wrapper > .toggler').click() //customer company dropdown open
         cy.wait(2000)
-        cy.get('.options > :nth-child(1)').click() //Select company from dropdown
+      }
 
+      function myFunction2(i){
         cy.get(':nth-child(5) > .w-full').type(first_name[i]) //first name
         cy.get(':nth-child(6) > .w-full').type(last_name[i]) //last name
 
-        cy.get(':nth-child(8) > .w-full').type('naveedhcse+11'+i+'@gmail.com') //writing email
+        cy.get(':nth-child(8) > .w-full').type('naveedhcse+m2'+i+'@gmail.com') //writing email
 
         cy.wait(2000)
         cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[13]/button[1]').click() //press on save button
+      
+      }
+      //Open Add form................
+      for (var i = 0; i < 25; i++) {
 
+        if(i==0){
+          myFunction1(i)
+          cy.get('.options > :nth-child(1)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else if(i==1){
+          myFunction1(i)
+          cy.get('.options > :nth-child(2)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else if(i==2){
+          myFunction1(i)
+          cy.get('.options > :nth-child(3)').click() //Select company from dropdown
+          myFunction2(i)
+          continue
+        }
+        else if(i==3){
+          myFunction1(i)
+          cy.get('.options > :nth-child(4)').click() //Select company from dropdown
+          myFunction2(i)
+          continue
+        }
+        else if(i==4){
+          myFunction1(i)
+          cy.get('.options > :nth-child(5)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else if(i==5){
+          myFunction1(i)
+          cy.get('.options > :nth-child(6)').click() //Select company from dropdown
+          myFunction2(i)
+          continue
+        }
+        else if(i==6){
+          myFunction1(i)
+          cy.get('.options > :nth-child(7)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else if(i==7){
+          myFunction1(i)
+          cy.get('.options > :nth-child(8)').click() //Select company from dropdown
+          myFunction2(i)
+          continue
+        }
+        else if(i==8){
+          myFunction1(i)
+          cy.get('.options > :nth-child(9)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else if(i==9){
+          myFunction1(i)
+          cy.get('.options > :nth-child(10)').click() //Select company from dropdown
+          cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[11]/div/div').click() //email invitation send
+          myFunction2(i)
+          continue
+        }
+        else{
+          myFunction1(i)
+          cy.get('.options > :nth-child(1)').click() //Select company from dropdown
+          myFunction2(i)
+        }
 
       }
   
