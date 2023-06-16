@@ -1,4 +1,6 @@
 /// <reference types="cypress-xpath" />
+import {first_name} from './Data';
+import {last_name} from './Data';
 
 describe('Add Customer Company Admin', () => {
     it('Login_SystemAdmin', function() {
@@ -10,18 +12,7 @@ describe('Add Customer Company Admin', () => {
       cy.xpath('/html/body/div/div/div[2]/div/div/form/div[3]/button').click()
       cy.wait(5000)
       cy.get('[href="/customer-company-admin"] > .link > .font-inter > div').click() //Click on CC Admin left menu
-      cy.get('.gap-5 > .cursor-pointer').click()
-  
-      //Required Name List...........
-      const first_name = ["John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
-       "Juyena", "Merlin", "Lucia", "Hanni", "John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
-       "Juyena", "Merlin", "Lucia", "Hanni", "John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
-       "Juyena", "Merlin", "Lucia", "Hanni"]
-
-      const last_name = ["Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
-       "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
-       "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
-       "Beris", "Desouza", "Born", "Dus"]
+      cy.get('.gap-5 > .cursor-pointer').click()  
 
       //Function with all information of add form.............
       function myFunction1(i) {
