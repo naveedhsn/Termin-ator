@@ -30,3 +30,7 @@ export const last_name = ["Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
 "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
 "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
 "Beris", "Desouza", "Born", "Dus"]
+
+//Organisation Element..............
+export const OE_name = ["Super", "Duoer", "Looper", "Market", "Alexa", "Play Mode", "SpaceX", "Keeper", "Bats Man", 
+"Cooper", "Zeepwe", "Hokchi", "Normisly", "Wordpress", "Nodejs", "Reactjs", "MERN Stack", "Python", "Database", "Lock"]
