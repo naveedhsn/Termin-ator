@@ -2,7 +2,7 @@
 import {OE_name} from './Data';
 
 
-describe('Add Customer Company', () => {
+describe('Add Organisation Element', () => {
   it('Login_SystemAdmin', function() {
     cy.viewport(1050,700) //Change viewport
     //cy.visit('https://app.termin-ator.ch/') //Production server
