@@ -20,6 +20,8 @@ export const ort = ["Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthu
      "Sankt Gallen", "Zürich", "Geneva", "Basel", "Lausanne", "Bern", "Winterthur", "Lucerne", "Fribourg", "Thun", 
      "Sankt Gallen"]
 
+export const email = ["naveedhcse+an"]
+
 //Data of add_company_admin....................
 export const first_name = ["John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
 "Juyena", "Merlin", "Lucia", "Hanni", "John", "Robert", "Donald", "Elon", "Joe", "Ivanka",
