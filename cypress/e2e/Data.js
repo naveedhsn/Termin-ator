@@ -33,6 +33,19 @@ export const last_name = ["Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
 "Beris", "Desouza", "Born", "Dus", "Doe", "Brown", "Trump", "Musk", "Biden", "Trump",
 "Beris", "Desouza", "Born", "Dus"]
 
-//Organisation Element..............
+//Data of Organisation Element..............
 export const OE_name = ["Super", "Duoer", "Looper", "Market", "Alexa", "Play Mode", "SpaceX", "Keeper", "Bats Man", 
 "Cooper", "Zeepwe", "Hokchi", "Normisly", "Wordpress", "Nodejs", "Reactjs", "MERN Stack", "Python", "Database", "Lock"]
+
+//Data of Broker............
+export const broker = ["Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John",
+"Smith", "Robert", "Lukia", "Simi", "Donald", "Joe", "Ivanka", "Bulls", "Kuls", "John"]
+
+
+//Contact Data Record.........
+export const birthdate = ["12.12.2000", "11.11.2001", "10.10.2002", "12.12.2030", "11.11.2501", "10.10.2202",
+"12.12.2000", "11.11.2001", "10.10.2002", "12.12.2030", "11.11.2501", "10.10.2202", "12.12.2000", "11.11.2001", 
+"10.10.2002", "12.12.2030", "11.11.2501", "10.10.2202", "12.12.2000", "11.11.2001", "10.10.2002", "12.12.2030", 
+"11.11.2501", "10.10.2202", "06.12.2007"]
+
+export const phone_no = ["44310333", "44440333", "44316633", "44310773", "44388333"]
