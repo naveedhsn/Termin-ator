@@ -5,6 +5,7 @@ import {street} from './Data';
 import {house} from './Data';
 import {post_code} from './Data';
 import {ort} from './Data';
+import {email} from './Data';
 
 
 
@@ -36,7 +37,7 @@ describe('Add Customer Company', () => {
       cy.get(':nth-child(3) > .wrapper > .default-flat').click() //country selection
       cy.get(':nth-child(12) > .w-full').type('Robert') //first name
       cy.get(':nth-child(13) > .w-full').type('Brown') //last name
-      cy.get(':nth-child(15) > .w-full').type('robert@mail.com') //email
+      cy.get(':nth-child(15) > .w-full').type(email[0]+i+'@gmail.com') //email
       cy.get(':nth-child(18) > .options > :nth-child(2) > .icon').click() //No selected from "Device Authentication required?"
       cy.get('.wrapper > .input-element > .w-full').type('600') //auto log out time
       cy.get(':nth-child(21) > .options > :nth-child(2) > .icon').click() //No selected from "Organizational elements required?"
