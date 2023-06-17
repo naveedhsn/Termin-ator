@@ -4,7 +4,7 @@ import {last_name} from './Data';
 import {email} from './Data';
 
 
-describe('Add Customer Company', () => {
+describe('Add Internal User', () => {
   it('Login_SystemAdmin', function() {
     cy.viewport(1050,700) //Change viewport
     //cy.visit('https://app.termin-ator.ch/') //Production server
@@ -42,7 +42,7 @@ describe('Add Customer Company', () => {
 
         cy.get(':nth-child(10) > .w-full').type(first_name[i]) //write first name
         cy.get(':nth-child(11) > .w-full').type(last_name[i]) //write last name
-        cy.get(':nth-child(13) > .w-full').type(email[0]+i+'@gmail.com') //write email
+        cy.get(':nth-child(13) > .w-full').type(email[0]+i+'iu@gmail.com') //write email
 
         cy.xpath('/html/body/div[1]/div/div[2]/div[3]/form/div[18]/div/div').click() //email invitation ON
         cy.wait(1000)
