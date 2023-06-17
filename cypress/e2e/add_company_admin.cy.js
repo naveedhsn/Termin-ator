@@ -1,6 +1,7 @@
 /// <reference types="cypress-xpath" />
-import {first_name} from './Data';
+import {email, first_name} from './Data';
 import {last_name} from './Data';
+import {email} from './Data';
 
 describe('Add Customer Company Admin', () => {
     it('Login_SystemAdmin', function() {
@@ -27,7 +28,7 @@ describe('Add Customer Company Admin', () => {
         cy.get(':nth-child(5) > .w-full').type(first_name[i]) //first name
         cy.get(':nth-child(6) > .w-full').type(last_name[i]) //last name
 
-        cy.get(':nth-child(8) > .w-full').type('naveedhcse+m2'+i+'@gmail.com') //writing email
+        cy.get(':nth-child(8) > .w-full').type(email[0]+i+'@gmail.com') //writing email
 
         cy.wait(2000)
         cy.xpath('/html/body/div/div/div[2]/div[3]/form/div[13]/button[1]').click() //press on save button
