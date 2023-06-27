@@ -10,12 +10,13 @@ describe('Add Contact Data', () => {
     cy.get('#password').type('Password12@')
     cy.xpath('/html/body/div/div/div[2]/div/div/form/div[3]/button').click()
     cy.wait(5000)
-    cy.xpath('/html/body/div/div/div[2]/div[2]/a[6]').click() //click on contact data left menu
-    cy.get('.gap-5 > .cursor-pointer').click()
+    cy.xpath('/html/body/div/div/div[2]/div[2]/a[5]').click() //click on contact data left menu
+    // cy.get('.gap-5 > .cursor-pointer').click()
 
 
     //Open Add form................
     for (var i = 0; i < 10; i++) {
+      cy.get('.gap-5 > .cursor-pointer').click()
       first_10(i)
       Second_10(i)
       Third_10(i)
