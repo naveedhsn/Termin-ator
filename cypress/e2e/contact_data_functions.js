@@ -1,6 +1,6 @@
 /// <reference types="cypress-xpath" />
 import {first_name, last_name} from './Data';
-import {email, birthdate, phone_no} from './Data';
+import {email, birthdate, phone_no, test_phone} from './Data';
 import {street} from './Data';
 import {house} from './Data';
 import {post_code} from './Data';
@@ -10,7 +10,10 @@ export function first_10(i){
     cy.wait(6000)
       cy.xpath('/html/body/div/div/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/button').click() //Open add form of contact data
 
-      cy.wait(3000)
+      cy.wait(6000)
+
+      cy.get('.general__information > .accordion > .accordion__body > .form > :nth-child(5) > .single-select > .wrapper > .toggler').click() //open campaign dropdown
+      cy.get(':nth-child(5) > .single-select > .wrapper > .options > :nth-child(2)').click() //select 2nd item from dropdown
 
       cy.get('.toggler > .outline-none').click() //open dropdown of Korrespondenzsprache
       cy.get('.options > :nth-child(1)').click() //select value from the dropdown
@@ -23,7 +26,7 @@ export function first_10(i){
       cy.get('#date').type(birthdate[i]) //write birthdate
       cy.get('.country-code-toggler > .outline-none').click() //open country code for mobile
       cy.get(':nth-child(1) > .dialcode').click() //select country switzerland
-      cy.get('.bg-transparent').type(phone_no[0]+i) //write mobile number
+      cy.get('.bg-transparent').type(phone_no+test_phone+i) //write mobile number
       cy.get(':nth-child(10) > .input-element > .w-full').type(email[0]+i+'cd@gmail.com') //write email
 
       cy.get(':nth-child(1) > .input-element > .w-full').type(street[i]) //write street name
@@ -50,7 +53,10 @@ export function Second_10(i){
     cy.wait(6000)
       cy.xpath('/html/body/div/div/div[2]/div[3]/div[1]/div[2]/div[2]/div[1]/button').click() //Open add form of contact data
 
-      cy.wait(3000)
+      cy.wait(6000)
+
+      cy.get('.general__information > .accordion > .accordion__body > .form > :nth-child(5) > .single-select > .wrapper > .toggler').click() //open campaign dropdown
+      cy.get(':nth-child(5) > .single-select > .wrapper > .options > :nth-child(3)').click() //select 3rd item from dropdown
 
       cy.get('.toggler > .outline-none').click() //open dropdown of Korrespondenzsprache
       cy.get('.options > :nth-child(1)').click() //select value from the dropdown
@@ -63,7 +69,7 @@ export function Second_10(i){
       cy.get('#date').type(birthdate[i]) //write birthdate
       cy.get('.country-code-toggler > .outline-none').click() //open country code for mobile
       cy.get(':nth-child(1) > .dialcode').click() //select country switzerland
-      cy.get('.bg-transparent').type(phone_no[1]+i) //write mobile number
+      cy.get('.bg-transparent').type(phone_no+test_phone+i) //write mobile number
       cy.get(':nth-child(10) > .input-element > .w-full').type(email[0]+i+'cd@gmail.com') //write email
 
       cy.get(':nth-child(1) > .input-element > .w-full').type(street[i]) //write street name
@@ -92,6 +98,9 @@ export function Third_10(i){
 
       cy.wait(3000)
 
+      cy.get('.general__information > .accordion > .accordion__body > .form > :nth-child(5) > .single-select > .wrapper > .toggler').click() //open campaign dropdown
+      cy.get(':nth-child(5) > .single-select > .wrapper > .options > :nth-child(4)').click() //select 4th item from dropdown
+
       cy.get('.toggler > .outline-none').click() //open dropdown of Korrespondenzsprache
       cy.get('.options > :nth-child(1)').click() //select value from the dropdown
 
@@ -103,7 +112,7 @@ export function Third_10(i){
       cy.get('#date').type(birthdate[i]) //write birthdate
       cy.get('.country-code-toggler > .outline-none').click() //open country code for mobile
       cy.get(':nth-child(1) > .dialcode').click() //select country switzerland
-      cy.get('.bg-transparent').type(phone_no[2]+i) //write mobile number
+      cy.get('.bg-transparent').type(phone_no+test_phone+i) //write mobile number
       cy.get(':nth-child(10) > .input-element > .w-full').type(email[0]+i+'cd@gmail.com') //write email
 
       cy.get(':nth-child(1) > .input-element > .w-full').type(street[i]) //write street name
@@ -131,6 +140,9 @@ export function Forth_10(i){
 
       cy.wait(3000)
 
+      cy.get('.general__information > .accordion > .accordion__body > .form > :nth-child(5) > .single-select > .wrapper > .toggler').click() //open campaign dropdown
+      cy.get(':nth-child(5) > .single-select > .wrapper > .options > :nth-child(5)').click() //select 5th item from dropdown
+
       cy.get('.toggler > .outline-none').click() //open dropdown of Korrespondenzsprache
       cy.get('.options > :nth-child(1)').click() //select value from the dropdown
 
@@ -142,7 +154,7 @@ export function Forth_10(i){
       cy.get('#date').type(birthdate[i]) //write birthdate
       cy.get('.country-code-toggler > .outline-none').click() //open country code for mobile
       cy.get(':nth-child(1) > .dialcode').click() //select country switzerland
-      cy.get('.bg-transparent').type(phone_no[3]+i) //write mobile number
+      cy.get('.bg-transparent').type(phone_no+test_phone+i) //write mobile number
       cy.get(':nth-child(10) > .input-element > .w-full').type(email[0]+i+'cd@gmail.com') //write email
 
       cy.get(':nth-child(1) > .input-element > .w-full').type(street[i]) //write street name
@@ -170,6 +182,9 @@ export function Fifth_10(i){
 
       cy.wait(3000)
 
+      cy.get('.general__information > .accordion > .accordion__body > .form > :nth-child(5) > .single-select > .wrapper > .toggler').click() //open campaign dropdown
+      cy.get(':nth-child(5) > .single-select > .wrapper > .options > :nth-child(6)').click() //select 6th item from dropdown
+
       cy.get('.toggler > .outline-none').click() //open dropdown of Korrespondenzsprache
       cy.get('.options > :nth-child(1)').click() //select value from the dropdown
 
@@ -181,7 +196,7 @@ export function Fifth_10(i){
       cy.get('#date').type(birthdate[i]) //write birthdate
       cy.get('.country-code-toggler > .outline-none').click() //open country code for mobile
       cy.get(':nth-child(1) > .dialcode').click() //select country switzerland
-      cy.get('.bg-transparent').type(phone_no[4]+i) //write mobile number
+      cy.get('.bg-transparent').type(phone_no+test_phone+i) //write mobile number
       cy.get(':nth-child(10) > .input-element > .w-full').type(email[0]+i+'cd@gmail.com') //write email
 
       cy.get(':nth-child(1) > .input-element > .w-full').type(street[i]) //write street name
